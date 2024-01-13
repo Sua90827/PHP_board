@@ -66,9 +66,9 @@
 	
 	mysqli_close($con); //disconnecting DB
 	
-	//echo("
-		//<script>
-			//location.href = 'board_list.php';
-		//</script>
-	//");
+	echo("
+		<script>
+			location.href = 'board_list.php';
+		</script>
+	");
 ?>
