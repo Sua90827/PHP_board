@@ -5,6 +5,13 @@
 <title>PHP 프로그래밍 입문</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css">
 <link rel="stylesheet" type="text/css" href="./css/board.css">
+<script>
+	function check_password(number, page_now, stored_password){
+		window.open("password_check.php?num=" + number + "&page=" + page_now + "&password=" + stored_password,
+			"PasswordCheck",
+			"left=700, top=300, width=350, height=200, scrollbars=no, resizable=yes");
+	}
+</script>
 </head>
 <body> 
 <header>
@@ -28,7 +35,7 @@
     
     $row = mysqli_fetch_array($result);
     $name = $row["name"];
-    $subject = $row["name"];
+    $subject = $row["subject"];
     $content = $row["content"];
     $regist_day = $row["regist_day"];
     $hit = $row["hit"];
@@ -67,7 +74,7 @@
 		<ul class="buttons">
 			<li><button onclick="location.href='board_list.php?page=<?=$page?>'">목록</button></li>
 			<li><button onclick="location.href='board_modify_form.php?num=<?=$num?>&page=<?=$page?>'">수정</button></li>
-			<li><button onclick="location.href='board_delete.php?num=<?=$num?>&page=<?=$page?>'">삭제</button></li>
+			<li><button onclick="check_password(<?=$num?>,<?=$page?>,<?=$password?>);">삭제</button></li>
 			<li><button onclick="location.href='board_form.php'">글쓰기</button></li>
 		</ul>
     </div><!-- board_box ENDS -->

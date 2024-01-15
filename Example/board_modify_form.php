@@ -24,7 +24,7 @@
 	}
 	if(document.board_form.stored_password.value !== document.board_form.password.value){
 		alert("비밀번호가 틀립니다. 작성자만 수정이 가능합니다.");
-		history.back();
+		location.go(-2);
 	}
 	document.board_form.submit();
 }

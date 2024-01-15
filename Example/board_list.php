@@ -77,6 +77,19 @@
             	mysqli_close($con);
             ?>
 	</ul>
+	
+	<ul id="page_num">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</ul>
 </div>
 		
 </section> 

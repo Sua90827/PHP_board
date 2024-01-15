@@ -5,7 +5,7 @@
 	$content = $_POST["content"];
 	$password = $_POST["password"];
 	
-	$name = htmlspecialchars($subject, ENT_QUOTES);
+	$name = htmlspecialchars($name, ENT_QUOTES);
 	$subject = htmlspecialchars($subject, ENT_QUOTES);
 	$content = htmlspecialchars($content, ENT_QUOTES);
 	$password = htmlspecialchars($password, ENT_QUOTES);
